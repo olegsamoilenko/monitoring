@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
       $data
       );
 
-    $user->notify((new UserRegistered($user))->afterCommit());
+//    $user->notify((new UserRegistered($user))->afterCommit());
 
 //    event(new Registered($user));
 //
