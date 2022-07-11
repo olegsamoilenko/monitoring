@@ -1,0 +1,176 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/*@import url('https://fonts.googleapis.com/css?family=Nunito');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap" rel="stylesheet');*/
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/gilroy-bold.woff2') format('woff2'),
+    url('../fonts/gilroy-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../fonts/gilroy-regular.woff2') format('woff2'),
+    url('../fonts/gilroy-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../fonts/gilroy-semibold.woff2') format('woff2'),
+    url('../fonts/gilroy-semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/gilroy-medium.woff2') format('woff2'),
+    url('../fonts/gilroy-medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('../fonts/gilroy-light.woff2') format('woff2'),
+    url('../fonts/gilroy-light.woff') format('woff');
+}
+
+.radio-toolbar input[type="radio"] {
+    display: none;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    padding: 2px 9px;
+    cursor: pointer;
+    /*border: 1px solid #DAD0FF;*/
+}
+
+/*.radio-toolbar label img {*/
+/*    width: 80px;*/
+/*}*/
+
+.radio-toolbar input[type="radio"]:checked+label {
+    background-color: #d0ffb7;
+    border: 1px solid #1CA92E;
+}
+
+@layer components {
+    .form-input {
+        @apply
+        mt-2.5
+        border
+        text-gray-500
+        text-14
+        border-gray-300
+        rounded-md
+        focus:shadow-form
+        focus:border-indigo-500
+        focus:ring-indigo-200
+        placeholder:text-14
+        placeholder:text-gray-500
+        placeholder:focus:text-[#494949]
+        placeholder:pl-[10px]
+    }
+
+    .form-label {
+        @apply
+        text-gray-900
+        /*text-14*/
+        /*font-medium*/
+    }
+
+    .form-error {
+        @apply
+        text-red-500
+        font-light
+        text-14
+    }
+
+    .btn {
+        @apply
+        rounded-md
+        block
+        mt-8
+        w-full
+        h-[54px]
+        bg-[#3DE530]
+        text-[#fff]
+    }
+
+    .btn-admin {
+        @apply
+        rounded-md
+        block
+        p-[12px]
+
+        bg-[#3DE530]
+        text-[#fff]
+    }
+
+    .main-menu {
+        @apply
+        w-full
+        text-center
+            /*hidden*/
+        md:flex
+        md:justify-between
+        md:items-center
+        md:h-[32px]
+    }
+
+    /*.active {*/
+    /*    @apply*/
+    /*    bg-gray-700*/
+    /*    bg-opacity-25*/
+    /*    text-gray-100 !important*/
+    /*}*/
+
+    .paginate-base {
+        @apply
+        bg-white
+        border-gray-300
+        text-gray-700
+        hover:bg-gray-50
+    }
+
+    .paginate-active {
+        @apply
+        z-10
+        bg-indigo-50
+        border-indigo-500
+        text-indigo-600
+    }
+
+
+    @layer utilities {
+        .modal {
+            color: black;
+            position: fixed;
+            top: 50px;
+            max-height: 70vh;
+            padding: 1rem;
+            background: #fff;
+            z-index: 1000;
+            left: 50%;
+            border-radius: 10px;
+            transform: translateX(-50%);
+            box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            z-index: 11;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .35);
+        }
+
+
+    }
+}
