@@ -91,6 +91,9 @@ export default {
       })
     }
   },
+  mounted() {
+    console.log('Login')
+  },
   components: {
     AppInput,
     AppButton
